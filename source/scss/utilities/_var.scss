@@ -3,7 +3,7 @@
 // ----------------------------------------
 
 $num-breakpoint-sm: 320; // 320px
-$num-breakpoint-md: 640; // 640px
+$num-breakpoint-md: 768; // 640px
 $num-breakpoint-lg: 960; // 960px
 $num-breakpoint-xl: 1312; // 1280px
 
@@ -16,10 +16,10 @@ $breakpoint-xl: #{$num-breakpoint-xl}px; // 1280px;
 // base
 // ----------------------------------------
 
-$gothic:'Noto Sans JP', -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+$gothic:"Yu Gothic", YuGothic, 'Noto Sans JP', -apple-system, BlinkMacSystemFont, "Helvetica Neue", "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
 $mincho:"游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
 $marugo:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
-
+$lato: 'Lato', sans-serif;;
 // ----------------------------------------
 // num
 // ----------------------------------------
@@ -108,6 +108,6 @@ $color-lightgray: #efefef;
 $color-gray: #aaa;
 $color-darkgray: #555;
 $color-red: #bb272d;
-$color-blue: #0071b6;
+$color-blue: #103889;
 $color-green: #008c45;
-$color-orange: #eb5a24;
+$color-orange: #FBCA24;

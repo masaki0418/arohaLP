@@ -1,2 +1,435 @@
-.p-articles {
+.recruitLp{
+	.recruitHead{
+		position: relative;
+		font-weight: 700;
+		.recruitHead__image{
+			img{
+				width: 100%;
+				height: 100%;
+			}
+		}
+		.recruitHead__content{
+			display: flex;
+			justify-content: center;
+			position: relative;
+			z-index:10;
+			position: absolute;
+			top: 200 * $vp;
+			left: 0;
+			right: 0;
+			margin: auto;
+			.recruitHead-box{
+				width: 50%;
+				label{
+					display: block;
+					margin-bottom: 85 * $vp;
+					margin-left: 50 * $vp;
+				}
+				.recruitHead-correct{
+					width: 520 * $vp;
+					background: $color-blue;
+					padding: 50 * $vp 50 * $vp 30 * $vp 50 * $vp;
+					display: block;
+					.correct__inner{
+						color: $color-orange;
+					}
+					.correct-area{
+						display: flex;
+						justify-content: space-between;
+						flex-wrap: wrap;
+						li{
+							width: 87 * $vp;
+							height: 35 * $vp;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							color: $color-blue;
+							background: #FFF;
+							margin-bottom: 20 * $vp;
+						}
+					}
+					a{
+						color: $color-orange;
+						display: block;
+						position: relative;
+						font-size: 19 * $vp;
+						line-height: 1.6;
+						strong{
+							font-size: 76 * $vp;
+							display: block;
+							margin-top: -15 * $vp;
+						}
+						&:after{
+							content:'';
+				    		background: url('/assets/img/arrow-circle.svg') no-repeat;
+				    		background-size: 100%;
+				    		width: 87 * $vp;
+				    		height: 87 * $vp;
+				    		display: block;
+				    		position: absolute;
+				    		right: 0;
+				    		top: 0;
+				    		bottom: 0;
+				    		margin: auto;
+				    		transition: .3s;
+						}
+						&:hover{
+							text-decoration: none;
+							&:after{
+								right: -20px;
+							}
+						}
+					}
+				}
+				.recruitHead-description{
+					width: 445 * $vp;
+					margin: 0 auto;
+					padding-top: 35 * $vp;
+					.description-head{
+						font-size: 20 * $vp;
+						display: flex;
+						flex-direction: column;
+						align-items: flex-start;
+						margin-bottom: 30 * $vp;
+						span{
+							display: inline-flex;
+							color: #FFF;
+							background: $color-blue;
+							padding: 6 * $vp 10 * $vp;
+							margin: 5 * $vp 0;
+						}
+					}
+					.description-main{
+						display: flex;
+						flex-direction: column;
+						align-items: flex-start;
+						span{
+							font-size: 56 * $vp;
+							display: inline-flex;
+							background: $color-orange;
+							margin-bottom: 15 * $vp;
+							padding: 15 * $vp 25 * $vp;
+							color: $color-blue;
+						}
+					}
+				}
+			}
+		}
+	}
+	.recruitSpirit{
+		background: url('/assets/img/bg-ourspirit.png') center bottom;
+		background-size: 100% auto;
+		height: 1470 * $vp;
+		padding: 165 * $vp 0 0 0;
+		position: relative;
+		font-weight: 700;
+		h2{
+			text-align: center;
+			width: 981 * $vp;
+			height: 144 * $vp;
+			position: absolute;
+			top: -50 * $vp;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+		p{
+			line-height: 2.3;
+			font-size: 18 * $vp;
+			margin-bottom: 40 * $vp;
+		}
+		.recruitSpirit-btn{
+			width: 325 * $vp;
+		}
+		.recruitSpirit__image{
+			width: 100%;
+			img{
+				width: 100%;
+			}
+		}
+	}
+	.recruitAchievement{
+		background: $color-blue;
+		color: #FFF;
+		padding: 90 * $vp 0 265 * $vp 0;
+		font-weight: 700;
+		.recruitAchievement__inner{
+			display: flex;
+			.recruitAchievement-colL{
+				width: 800 * $vp;
+				padding-right: 35 * $vp;
+				border-right: 1px solid #fff;
+			}
+			.recruitAchievement-colR{
+				width: 500 * $vp;
+				padding-left: 35 * $vp;
+			}
+			.achievement-boxLarge{
+				width: 100%;
+				border-bottom: 1px solid #fff;
+				padding: 40 * $vp 0 60 * $vp;
+				margin-bottom: 40 * $vp;
+				&.is-noMargin{
+					padding-bottom: 0;
+				}
+				&.is-autoHeight{
+					height: 400 * $vp;
+				}
+				&.is-noBorder{
+					border-bottom: 0;
+					padding-top: 30 * $vp;
+					margin-bottom: 0;
+					padding-bottom: 0;
+				}
+				p{
+					text-align: center;
+					font-size: 15 * $vp;
+					margin-top: 15 * $vp;
+				}
+			}
+			.achievement-boxSmall{
+				width: 50%;
+				width: 100%;
+				padding: 30 * $vp 0 60 * $vp;
+				&:first-child{
+					border-right: 1px solid #fff;
+				}
+			}
+			.achievement-col{
+				display: flex;
+				.achievement-box{
+					width: calc(100% / 3);
+				}
+			}
+			.achievement-colS{
+				display: flex;
+			}
+			.achievement-box{
+				text-align: center;
+				label{
+					display: block;
+					font-size: 24 * $vp;
+					margin-bottom: 10 * $vp;
+				}
+				span{
+					display: block;
+					font-style: italic;
+					font-size: 86 * $vp;
+					margin-bottom: 5 * $vp;
+				}
+				small{
+					display: block;
+					text-align: right;
+					font-size: 38 * $vp;
+					margin-right: 1em;
+				}
+			}
+			.achievement-boxMin{
+				text-align: center;
+				width: 50%;
+				label{
+					display: block;
+					font-size: 20 * $vp;
+					margin-bottom: 10 * $vp;
+				}
+				span{
+					display: flex;
+					align-items: flex-end;
+					justify-content: center;
+					font-family: $lato;
+					font-style: italic;
+					font-size: 57 * $vp;
+					small{
+						font-family: $gothic;
+						font-size: 33 * $vp;
+					}
+				}
+			}
+			.achievement-line{
+				font-size: 57 * $vp;
+				display: flex;
+				align-items: flex-end;
+				justify-content: center;
+				small{
+					font-size: 43 * $vp;
+				}
+				b{
+					font-size: 84 * $vp;
+					font-style: italic;
+					margin-right: 15 * $vp;
+					font-family: $lato;
+				}
+				
+			}
+			.achievement-time{
+				text-align: center;
+				margin-bottom: 15 * $vp;
+				&:last-child{
+					margin-bottom: 0;
+				}
+				p{
+					margin-top: 5 * $vp;
+				}
+			}
+		}
+		h2{
+			font-size: 18 * $vp;
+			border: 1px solid #fff;
+			height: 60 * $vp;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			line-height: 1.2;
+			padding: 0 30 * $vp;
+			width: 210 * $vp;
+			margin: 0 auto 40 * $vp auto;
+			&.is-long{
+				width: 300 * $vp;
+			}
+			+ .achievement-time{
+				margin-top: -20 * $vp;
+			}
+		}
+	}
 }
+.recruitCta{
+	padding-bottom: 180 * $vp;
+	position: relative;
+	width: 100%;
+	height: 670 * $vp;
+	.recruitCta__image{
+		background: #F3F5F7;
+		position: relative;
+		width: 100%;
+		height: 495 * $vp;
+		figure{
+			width: 1300 * $vp;
+			height: 545 * $vp;
+			margin: 0 auto;
+			position: absolute;
+			top: -50 * $vp;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit:cover;
+			object-position:center top;
+		}
+	}
+	.recruitCta__inner{
+		width: 845 * $vp;
+		padding: 0 20 * $vp;
+		margin: -415 * $vp auto 0 auto;
+		position: relative;
+		z-index:20;
+	}
+	.recruitCta__body{
+		background: $color-blue;
+		padding: 30 * $vp 70 * $vp;
+		h2{
+			margin-bottom: 20 * $vp;
+			height: 88 * $vp;
+			text-align: center;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+			label{
+				width: 365 * $vp;
+				height: 88 * $vp;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				margin: auto;
+				display: block;
+				z-index:10;
+			}
+			span{
+				position: relative;
+				z-index:15;
+				color: #FFF;
+				background: $color-blue;
+				font-weight: 700;
+				padding: 0 10 * $vp;
+				font-size: 18 * $vp;
+			}
+		}
+	}
+	.recruitCta-description{
+		line-height: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		font-weight: 700;
+		margin-bottom: 55 * $vp;
+		span{
+			display: inline-flex;
+			font-size: 24 * $vp;
+			color: #FFF;
+			background: $color-blue;
+			padding: 25 * $vp 35 * $vp;
+			margin: 5 * $vp 0;
+		}
+	}
+	.recruitCta-btn{
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 30 * $vp;
+		a{
+			width: 315 * $vp;
+		}
+	}
+	.recruitCta-tel{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-weight: 700;
+		label{
+			width: 55 * $vp;
+			height: 25 * $vp;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: $color-blue;
+			font-size: 12 * $vp;
+			background: #FFF;
+			border-radius:20 * $vp;
+			margin-right: 15 * $vp;
+		}
+		a{
+			font-size: 19 * $vp;
+			color: #FFF;
+			&:hover{
+				text-decoration: none;
+				color: $color-orange;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

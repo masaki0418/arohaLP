@@ -1,0 +1,15 @@
+.lpHeader{
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index:100;
+	h1{
+		width: 190 * $vp;
+		height: 190 * $vp;
+		background: #FFF;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}
