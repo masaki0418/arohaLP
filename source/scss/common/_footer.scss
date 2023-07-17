@@ -50,3 +50,75 @@
 		}
 	}
 }
+.global{
+	width: 100%;
+	height: 100vh;
+	background: $color-blue;
+	display: none;
+	opacity: 0;
+	transition: .3s;
+	animation: fade-in 0.3s ease-in 0s forwards;
+	&.active{
+		display: flex;
+		flex-direction: column;
+		opacity: 1;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index:1000;
+	}
+	.global__inner{
+		padding-top: 140 * $vp;
+		overflow-y: scroll !important;
+	}
+	.globalNav{
+		width: 850 * $vp;
+		margin: 0 auto -50 * $vp auto;
+		a{
+			display: flex;
+			align-items: center;
+			&:after{
+				content:'';
+				background: url('/assets/img/arrow-circle-min.svg') no-repeat;
+    			background-size: 100%;
+    			width: 30 * $vp;
+    			height: 31 * $vp;
+    			display: block;
+    			margin-left: 15 * $vp;
+    			transition: .3s;
+    			flex-shrink: 0;
+			}
+			&:hover{
+				&:after{
+					margin-left: 20 * $vp;
+				}
+			}
+		}
+		.global-top{
+			margin-bottom: 50 * $vp;
+		}
+		.global-mid{
+			margin-bottom: 50 * $vp;
+			dt{
+				margin-bottom: 30 * $vp;
+			}
+			dd{
+				display: flex;
+				margin: 0 -25 * $vp;
+				a{
+					margin: 0 25 * $vp;
+				}
+			}
+		}
+		.global-bottom{
+			display: flex;
+			flex-wrap: wrap;
+			margin: -25 * $vp 0;
+			a{
+				width: calc(100% / 3);
+				margin: 25 * $vp 0;
+				padding-right: 1em;
+			}
+		}
+	}
+}

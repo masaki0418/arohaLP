@@ -1,1 +1,1 @@
-jQuery(function(n){});
+jQuery((function(a){a(".navToggle").click((function(){a(this).toggleClass("active"),a(this).hasClass("active")?(a(".global").addClass("active"),a("body").addClass("fixed")):(a(".global").removeClass("active"),a("body").removeClass("fixed"))})),a(".global a").click((function(){a(".global").removeClass("active"),a(".navToggle").removeClass("active"),a("body").removeClass("fixed")})),a('a[href^="#"]').click((function(){let e=a(this).attr("href"),l=a("#"==e||""==e?"html":e).offset().top;return a("html, body").animate({scrollTop:l},500,"swing"),!1}))}));

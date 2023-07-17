@@ -1,9 +1,9 @@
 .lpHeader{
-	width: 100%;
+	width: 190 * $vp;
 	position: fixed;
 	top: 0;
 	left: 0;
-	z-index:100;
+	z-index:10000;
 	h1{
 		width: 190 * $vp;
 		height: 190 * $vp;

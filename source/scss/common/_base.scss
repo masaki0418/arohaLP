@@ -103,20 +103,112 @@ p{
 	width: 1120 * $vp;
 	padding: 0 20 * $vp;
 	margin: 0 auto;
+	@include mediaquery-md {
+		width: 100%;
+	}
 }
 .large-container{
 	width: 1300 * $vp;
 	padding: 0 20 * $vp;
 	margin: 0 auto;
+	@include mediaquery-md {
+		width: 100%;
+	}
 }
 .mid-container{
 	width: 1040 * $vp;
 	padding: 0 20 * $vp;
 	margin: 0 auto;
+	@include mediaquery-md {
+		width: 100%;
+	}
+}
+.min-container{
+	width: 970 * $vp;
+	padding: 0 20 * $vp;
+	margin: 0 auto;
+	@include mediaquery-md {
+		width: 100%;
+	}
 }
 .is-minus20{
 	margin-top: -20px;
 }
 .is-plus20{
 	margin-top: 20px;
+}
+.navToggle {
+    position: fixed;
+    top: 35 * $vp;
+    right: 35 * $vp;
+    margin: auto;
+    width: 81 * $vp;
+    height: 81 * $vp;
+    cursor: pointer;
+    z-index: 100000;
+    text-align: center;
+    transition: .7s;
+    background: $color-blue;
+    border-radius:50%;
+    @include mediaquery-md {
+    	width: 50 * $vp;
+    	height: 50 * $vp;
+    }
+	span{
+		display: block;
+		position: absolute;
+		margin: auto;
+		right: 0;
+		left: 0;
+		width: 25 * $vp;
+		border-bottom: solid 3px #fff;
+		transition: .35s ease-in-out;
+		@include mediaquery-md {
+			width: 25 * $vp;
+			border-bottom: solid 2px #fff;
+		}
+		&:nth-child(1) {
+			top: 30 * $vp;
+			@include mediaquery-md {
+				top: 18 * $vp;
+			}
+		}
+		&:nth-child(2) {
+			top: 40 * $vp;
+			@include mediaquery-md {
+				top: 25 * $vp;
+			}
+		}
+		&:nth-child(3) {
+			top: 50 * $vp;
+			@include mediaquery-md {
+				top: 32 * $vp;
+			}
+		}
+    }
+    &.active{
+    	span{
+			&:nth-child(1) {
+				top: 40 * $vp;
+				transform: rotate(-45deg);
+				@include mediaquery-md {
+					top: 25 * $vp;
+				}
+			}
+			&:nth-child(2){
+				top: 40 * $vp;
+				transform: rotate(45deg);
+				@include mediaquery-md {
+					top: 25 * $vp;
+				}
+			}
+			&:nth-child(3){
+				top: 40 * $vp;
+				transform: rotate(45deg);
+				@include mediaquery-md {
+					top: 25 * $vp;
+				}
+			}
+    	}
+    }
 }
