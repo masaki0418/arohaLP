@@ -4,6 +4,9 @@
 	top: 0;
 	left: 0;
 	z-index:10000;
+	@include mediaquery-md {
+		width: 94 * $vp;
+	}
 	h1{
 		width: 190 * $vp;
 		height: 190 * $vp;
@@ -11,5 +14,13 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		@include mediaquery-md {
+			width: 94 * $vp;
+			height: 94 * $vp;
+			img{
+				width: 37 * $vp;
+				height: 48 * $vp;
+			}
+		}
 	}
 }

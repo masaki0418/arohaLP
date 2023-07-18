@@ -3,9 +3,19 @@
 		position: relative;
 		font-weight: 700;
 		.recruitHead__image{
+			@include mediaquery-md {
+				position: absolute;
+				width: 100%;
+				height: 272 * $vp;
+				top: 0;
+				left: 0;
+				z-index:-10;
+			}
 			img{
 				width: 100%;
-				height: 100%;
+				height: 272 * $vp;
+				object-fit:cover;
+				object-position:center top;
 			}
 		}
 		.recruitHead__content{
@@ -18,13 +28,32 @@
 			left: 0;
 			right: 0;
 			margin: auto;
+			@include mediaquery-md {
+				position: static;
+				flex-direction:column;
+			}
 			.recruitHead-box{
 				width: 50%;
+				@include mediaquery-md {
+					width: 100%;
+					&:first-child{
+						order:1;
+						margin-top: -30 * $vp;
+						z-index:-1;
+					}
+				}
 				label{
 					width: 96%;
 					display: block;
 					margin-bottom: 85 * $vp;
 					margin-left: 50 * $vp;
+					@include mediaquery-md {
+						width: 290 * $vp;
+						margin-bottom: 25 * $vp;
+						position: absolute;
+						top: 70 * $vp;
+						left: 25 * $vp;
+					}
 				}
 				.recruitHead-correct{
 					width: 74%;
@@ -32,15 +61,27 @@
 					background: $color-blue;
 					padding: 50 * $vp 50 * $vp 30 * $vp 50 * $vp;
 					display: block;
+					@include mediaquery-md {
+						width: 100%;
+						min-width:initial;
+						padding: 55 * $vp 55 * $vp 30 * $vp 55 * $vp;
+						order:1;
+					}
 					.correct__inner{
 						width: 420 * $vp;
 						color: $color-orange;
 						margin: 0 auto;
+						@include mediaquery-md {
+							width: 100%;
+						}
 					}
 					.correct-area{
 						display: flex;
 						justify-content: space-between;
 						flex-wrap: wrap;
+						@include mediaquery-md {
+							margin-bottom: 15 * $vp;
+						}
 						li{
 							width: 87 * $vp;
 							height: 35 * $vp;
@@ -50,6 +91,12 @@
 							color: $color-blue;
 							background: #FFF;
 							margin-bottom: 20 * $vp;
+							@include mediaquery-md {
+								width: 52 * $vp;
+								height: 20 * $vp;
+								font-size: 10 * $vp;
+								margin: 7 * $vp;
+							}
 						}
 					}
 					a{
@@ -58,10 +105,17 @@
 						position: relative;
 						font-size: 19 * $vp;
 						line-height: 1.6;
+						@include mediaquery-md {
+							font-size: 11 * $vp;
+						}
 						strong{
 							font-size: 76 * $vp;
 							display: block;
 							margin-top: -15 * $vp;
+							@include mediaquery-md {
+								font-size: 43 * $vp;
+								margin-top: -5 * $vp;
+							}
 						}
 						&:after{
 							content:'';
@@ -76,6 +130,10 @@
 				    		bottom: 0;
 				    		margin: auto;
 				    		transition: .3s;
+				    		@include mediaquery-md {
+				    			width: 51 * $vp;
+				    			height: 53 * $vp;
+				    		}
 						}
 						&:hover{
 							text-decoration: none;
@@ -89,12 +147,29 @@
 					width: 445 * $vp;
 					margin: 0 auto;
 					padding-top: 35 * $vp;
+					@include mediaquery-md {
+						width: 100%;
+						padding: 180 * $vp 30 * $vp 0 30 * $vp;
+					}
 					.description-head{
 						font-size: 20 * $vp;
 						display: flex;
 						flex-direction: column;
 						align-items: flex-start;
 						margin-bottom: 30 * $vp;
+						&.is-sp{
+							display: none;
+						}
+						@include mediaquery-md {
+							font-size: 10 * $vp;
+							margin-bottom: 6 * $vp;
+							&.is-sp{
+								display: flex;
+							}
+							&.is-pc{
+								display: none;
+							}
+						}
 						span{
 							display: inline-flex;
 							color: #FFF;
@@ -107,6 +182,20 @@
 						display: flex;
 						flex-direction: column;
 						align-items: flex-start;
+						&.is-sp{
+							display: none;
+						}
+						@include mediaquery-md {
+							&.is-sp{
+								display: flex;
+							}
+							&.is-pc{
+								display: none;
+							}
+							&.is-pc{
+								display: none;
+							}
+						}
 						span{
 							font-size: 56 * $vp;
 							display: inline-flex;
@@ -114,9 +203,20 @@
 							margin-bottom: 15 * $vp;
 							padding: 15 * $vp 25 * $vp;
 							color: $color-blue;
+							@include mediaquery-md {
+								font-size: 21 * $vp;
+								padding: 5 * $vp 7 * $vp;
+								margin-bottom: 6 * $vp;
+							}
 						}
 					}
 				}
+			}
+		}
+		.header-spImg{
+			display: none;
+			@include mediaquery-md {
+				display: block;
 			}
 		}
 	}
