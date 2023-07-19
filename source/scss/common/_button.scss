@@ -55,7 +55,7 @@
     		&:after{
 	    		content:'';
 	    		background: url('/assets/img/arrow-circle-b.svg') no-repeat;
-	    		background-size: 100%;
+	    		background-size: cover;
 	    		width: 71 * $vp;
 	    		height: 71 * $vp;
 	    		display: block;
@@ -73,10 +73,18 @@
     }
     &.size-mid{
     	height: 105 * $vp;
+    	@include mediaquery-md {
+    		height: 75 * $vp;
+    		font-size: 14 * $vp;
+    	}
     	span{
     		&:after{
     			width: 51 * $vp;
     			height: 51 * $vp;
+    			@include mediaquery-md {
+    				width: 36 * $vp;
+    				height: 36 * $vp;
+    			}
     		}
     	}
     	&:hover{
@@ -84,6 +92,10 @@
     			&:after{
     				width: 51 * $vp;
     				height: 51 * $vp;
+    				@include mediaquery-md {
+    					width: 36 * $vp;
+    					height: 36 * $vp;
+    				}
     			}
     		}
     	}
@@ -165,6 +177,10 @@
     &.size-mid{
     	height: 80 * $vp;
     	font-size: 19 * $vp;
+    	@include mediaquery-md {
+    		font-size: 14 * $vp !important;
+    		height: 75 * $vp;
+    	}
     	span{
     		&:after{
     			width: 29 * $vp;

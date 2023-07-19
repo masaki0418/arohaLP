@@ -10,12 +10,12 @@
 				top: 0;
 				left: 0;
 				z-index:-10;
-			}
-			img{
-				width: 100%;
-				height: 272 * $vp;
-				object-fit:cover;
-				object-position:center top;
+				img{
+					width: 100%;
+					height: 272 * $vp;
+					object-fit:cover;
+					object-position:center top;
+				}
 			}
 		}
 		.recruitHead__content{
@@ -221,12 +221,17 @@
 		}
 	}
 	.recruitSpirit{
-		background: url('/assets/img/bg-ourspirit.png') center bottom;
+		background: url('/assets/img/bg-ourspirit.png') no-repeat center bottom;
 		background-size: 100% auto;
 		height: 1470 * $vp;
 		padding: 165 * $vp 0 0 0;
 		position: relative;
 		font-weight: 700;
+		@include mediaquery-md {
+			height: auto;
+			padding: 80 * $vp 0 280 * $vp 0;
+			background-color: #E0E4E3;
+		}
 		h2{
 			text-align: center;
 			width: 981 * $vp;
@@ -236,6 +241,12 @@
 			left: 0;
 			right: 0;
 			margin: auto;
+			@include mediaquery-md {
+				width: 100%;
+				height: auto;
+				padding: 0 20 * $vp;
+				top: -25 * $vp;
+			}
 		}
 		p{
 			line-height: 2.3;
@@ -244,6 +255,10 @@
 		}
 		.recruitSpirit-btn{
 			width: 325 * $vp;
+			@include mediaquery-md {
+				width: 225 * $vp;
+				margin: 0 auto;
+			}
 		}
 		.recruitSpirit__image{
 			width: 100%;
@@ -257,16 +272,33 @@
 		color: #FFF;
 		padding: 90 * $vp 0 265 * $vp 0;
 		font-weight: 700;
+		@include mediaquery-md {
+			padding: 45 * $vp 0 80 * $vp 0;
+		}
 		.recruitAchievement__inner{
 			display: flex;
+			@include mediaquery-md {
+				flex-direction: column;
+			}
 			.recruitAchievement-colL{
 				width: 800 * $vp;
 				padding-right: 35 * $vp;
 				border-right: 1px solid #fff;
+				@include mediaquery-md {
+					width: 100%;
+					padding-right: 0;
+					border-right: 0;
+					border-bottom: 1px solid #fff;
+					padding-bottom: 35 * $vp;
+				}
 			}
 			.recruitAchievement-colR{
 				width: 500 * $vp;
 				padding-left: 35 * $vp;
+				@include mediaquery-md {
+					width: 100%;
+					padding-left: 0;
+				}
 			}
 			.achievement-boxLarge{
 				width: 100%;
@@ -278,6 +310,9 @@
 				}
 				&.is-autoHeight{
 					height: 400 * $vp;
+					@include mediaquery-md {
+						height: auto;
+					}
 				}
 				&.is-noBorder{
 					border-bottom: 0;
@@ -293,20 +328,38 @@
 			}
 			.achievement-boxSmall{
 				width: 50%;
-				width: 100%;
 				padding: 30 * $vp 0 60 * $vp;
+				@include mediaquery-md {
+					width: 100%;
+				}
 				&:first-child{
 					border-right: 1px solid #fff;
 				}
 			}
 			.achievement-col{
 				display: flex;
+				@include mediaquery-md {
+					flex-direction: column;
+				}
 				.achievement-box{
 					width: calc(100% / 3);
+					@include mediaquery-md {
+						width: 100%;
+						padding: 20 * $vp 0;
+					}
+				}
+				&.is-flexMin{
+					flex-direction: row;
+					@include mediaquery-md {
+						display: flex !important;
+					}
 				}
 			}
 			.achievement-colS{
 				display: flex;
+				@include mediaquery-md {
+					flex-direction: column;
+				}
 			}
 			.achievement-box{
 				text-align: center;
@@ -398,6 +451,9 @@
 	}
 	.recruitApplication{
 		padding: 80 * $vp 20 * $vp 255 * $vp 20 * $vp;
+		@include mediaquery-md {
+			padding-bottom: 150 * $vp;
+		}
 		.recruitApplication__inner{
 			padding: 0;
 			margin: 0 -20 * $vp;
@@ -406,6 +462,10 @@
 			display: flex;
 			justify-content: space-between;
 			margin: 0 -10 * $vp;
+			@include mediaquery-md {
+				flex-direction: column;
+				margin: -40 * $vp 0;
+			}
 			li{
 				width: calc(100% / 3 - #{20 * $vp});
 				background: $color-blue;
@@ -418,6 +478,11 @@
 				flex-direction:column;
 				align-items: center;
 				justify-content: center;
+				@include mediaquery-md {
+					width: 100%;
+					margin: 40 * $vp 0;
+					padding-bottom: 110 * $vp;
+				}
 			}
 			label{
 				font-size: 20 * $vp;
@@ -429,6 +494,9 @@
 				color: $color-orange;
 				font-weight: 700;
 				margin-bottom: 40 * $vp;
+				@include mediaquery-md {
+					font-size: 28 * $vp;
+				}
 			}
 			h3{
 				width: 180 * $vp;
@@ -439,14 +507,25 @@
 				align-items: center;
 				justify-content: center;
 				margin: 0 auto 15 * $vp auto;
+				@include mediaquery-md {
+					font-size: 22 * $vp;
+					width: 140 * $vp;
+					height: 45 * $vp;
+				}
 			}
 			p{
 				font-size: 20 * $vp;
 				line-height: 1.5;
+				@include mediaquery-md {
+					font-size: 18 * $vp;
+				}
 				strong{
 					display: block;
 					font-size: 28 * $vp;
 					margin-bottom: 10 * $vp;
+					@include mediaquery-md {
+						font-size: 22 * $vp;
+					}
 				}
 			}
 			.application-btn{
@@ -457,6 +536,10 @@
 				left: 0;
 				right: 0;
 				margin: auto;
+				@include mediaquery-md {
+					width: 210 * $vp;
+					bottom: -75 * $vp;
+				}
 				a{
 					width: 100%;
 					height: 120 * $vp;
@@ -470,6 +553,10 @@
 					font-weight: 700;
 					text-align: center;
 					color: $color-blue;
+					@include mediaquery-md {
+						height: 100 * $vp;
+						font-size: 22 * $vp;
+					}
 					span{
 						position: relative;
 						z-index:10;
@@ -484,6 +571,10 @@
 				    		left: 0;
 				    		right: 0;
 				    		margin: auto;
+				    		@include mediaquery-md {
+				    			width: 33 * $vp;
+				    			height: 33 * $vp;
+				    		}
 				    	}
 					}
 					&:before{
@@ -491,10 +582,10 @@
 						width: 0;
 						height: 0;
 						border-style: solid;
-						border-width: 35 * $vp 130 * $vp 0 130 * $vp;
+						border-width: 30 * $vp 105 * $vp 0 105 * $vp;
 						border-color: #fbc924 transparent transparent transparent;
 						position: absolute;
-						bottom: -35 * $vp;
+						bottom: -30 * $vp;
 						left: 0;
 						right: 0;
 						margin: auto;
@@ -521,6 +612,11 @@
 				right: 0;
 				margin: auto;
 				z-index:10;
+				@include mediaquery-md {
+					width: 315 * $vp;
+					height: 61 * $vp;
+					top: -30 * $vp;
+				}
 			}
 			.recruitCategory__headerInner{
 				position: relative;
@@ -530,6 +626,11 @@
 				.category__header-text{
 					position: relative;
 					padding:185 * $vp 0 200 * $vp 0;
+					z-index:10;
+					@include mediaquery-md {
+						padding: 220 * $vp 0 0 0;
+						margin-bottom: -100 * $vp;
+					}
 				}
 				.category__header-description{
 					display: inline-flex;
@@ -539,15 +640,24 @@
 					padding: 15 * $vp;
 					background: $color-blue;
 					margin-bottom: 15 * $vp;
+					@include mediaquery-md {
+						font-size: 18 * $vp;
+					}
 				}
 				.category__header-application{
 					display: inline-flex;
 					background: $color-blue;
 					padding: 15 * $vp;
 					font-size: 18 * $vp;
+					@include mediaquery-md {
+						font-size: 13 * $vp;
+					}
 				}
 				h2{
 					margin-bottom: 15 * $vp;
+					@include mediaquery-md {
+						width: 90%;
+					}
 				}
 			}
 			&.is-header01{
@@ -556,10 +666,21 @@
 				.category__header-image{
 					top: 60 * $vp;
 					right: 0;
+					@include mediaquery-md {
+						width: 260 * $vp;
+						top: 20 * $vp;
+						left: 0;
+						right: 0;
+						margin: auto;
+					}
 					img{
 						width: 745 * $vp;
 						object-fit:cover;
 						object-position:top center;
+						@include mediaquery-md {
+							width: 260 * $vp;
+							height: 410 * $vp;
+						}
 					}
 				}
 			}
@@ -569,10 +690,21 @@
 				.category__header-image{
 					top: 130 * $vp;
 					right: 30 * $vp;
+					@include mediaquery-md {
+						width: 295 * $vp;
+						top: 70 * $vp;
+						left: 0;
+						right: 0;
+						margin: auto;
+					}
 					img{
 						width: 745 * $vp;
 						object-fit:cover;
 						object-position:top center;
+						@include mediaquery-md {
+							width: auto;
+							height: 355 * $vp;
+						}
 					}
 				}
 				.category__header-text{
@@ -585,14 +717,28 @@
 				.category__header-image{
 					top: 10 * $vp;
 					right: 40 * $vp;
+					@include mediaquery-md {
+						left: 0;
+						right: 0;
+						margin: auto;
+						width: 240 * $vp;
+						height: 380 * $vp;
+					}
 					img{
 						width: 560 * $vp;
 						object-fit:cover;
 						object-position:top center;
+						@include mediaquery-md {
+							width: 240 * $vp;
+							height: 380 * $vp;
+						}
 					}
 				}
 				.category__header-text{
 					padding-top: 270 * $vp;
+					@include mediaquery-md {
+						padding-top: 230 * $vp;
+					}
 				}
 			}
 		}
@@ -600,6 +746,9 @@
 			background: $color-blue;
 			position: relative;
 			padding: 200 * $vp 0 165 * $vp 0;
+			@include mediaquery-md {
+				padding-top: 120 * $vp;
+			}
 			&:before{
 				content:'';
 				background: url('/assets/img/bg-recruit-tri.svg') no-repeat;
@@ -612,10 +761,18 @@
 				left: 0;
 				right: 0;
 				margin: auto;
+				@include mediaquery-md {
+					height: 50 * $vp;
+					min-height: initial;
+					top: -50 * $vp;
+				}
 			}
 			.recruitCategory__bodyInner{
 				position: relative;
 				padding: 0 60 * $vp;
+				@include mediaquery-md {
+					padding: 0 45 * $vp;
+				}
 			}
 			.category-catch{
 				font-size: 55 * $vp;
@@ -630,11 +787,20 @@
 				position: absolute;
 				top: -380 * $vp;
 				left: 55%;
+				@include mediaquery-md {
+					position: static;
+					font-size: 25 * $vp;
+					align-items: flex-start;
+					margin-bottom: 45 * $vp;
+				}
 			}
 		}
 		.category__bodyList{
 			display: flex;
 			flex-wrap:wrap;
+			@include mediaquery-md {
+				margin-top: -40 * $vp;
+			}
 			li{
 				width: 360 * $vp;
 				margin: 0 10 * $vp;
@@ -642,12 +808,21 @@
 				margin-bottom: 40 * $vp;
 				margin-right: 15 * $vp;
 				position: relative;
-				
+				@include mediaquery-md {
+					width: 100%;
+					padding: 40 * $vp 0;
+					border-bottom: 1px solid #fff;
+					margin-bottom: 0;
+				}
 				&.is-boderRight{
-					border-right: 1px solid #fff
+					border-right: 1px solid #fff;
+					@include mediaquery-md {
+						border-right: 0;
+					}
 				}
 				&.is-boderTop{
 					padding-top: 40 * $vp;
+					@include mediaquery-md {}
 					&:before{
 						content:'';
 						width: calc(100% - #{30 * $vp});
@@ -657,6 +832,9 @@
 						position: absolute;
 						top: -20 * $vp;
 						left: 0;
+						@include mediaquery-md {
+							display: none;
+						}
 					}
 				}
 				i{
@@ -674,10 +852,21 @@
 					align-items: center;
 					justify-content: center;
 					margin-bottom: 40 * $vp;
+					@include mediaquery-md {
+						width: 74 * $vp;
+						height: 74 * $vp;
+						font-size: 35 * $vp;
+						padding-right: 10 * $vp;
+						padding-bottom: 10 * $vp;
+						margin-bottom: 30 * $vp;
+					}
 				}
 				.list-description{
 					font-size: 20 * $vp;
 					margin-bottom: 20 * $vp;
+					@include mediaquery-md {
+						font-size: 15 * $vp;
+					}
 				}
 				h4{
 					color: $color-orange;
@@ -685,6 +874,9 @@
 					font-size: 24 * $vp;
 					line-height: 1.4;
 					margin-bottom: 20 * $vp;
+					@include mediaquery-md {
+						font-size: 18 * $vp;
+					}
 				}
 			}
 			&.is-3col{
@@ -705,13 +897,23 @@
 				width: 880 * $vp;
 				margin: 0 auto 100 * $vp auto;
 				justify-content: center;
+				@include mediaquery-md {
+					width: 100%;
+				}
 				li{
 					width: 47%;
 					padding-right: 50 * $vp;
 					padding-left: 0;
+					@include mediaquery-md 
+					width: 100%;
+					padding-right: 0;
 					&:nth-child(even){
 						padding-left: 30 * $vp;
 						padding-right: 20 * $vp;
+						@include mediaquery-md {
+							padding-right: 0;
+							padding-left: 0;
+						}
 					}
 				}
 			}
@@ -722,6 +924,11 @@
 			padding: 90 * $vp 95 * $vp;
 			background: #fff;
 			color: #000;
+			@include mediaquery-md {
+				width: calc(100% + #{30 * $vp});
+				padding: 40 * $vp 20 * $vp;
+				margin: 0 -15 * $vp;
+			}
 			h3{
 				text-align: center;
 				width: 547 * $vp;
@@ -734,6 +941,11 @@
 				color: #000;
 				font-size: 32 * $vp;
 				font-weight: 700;
+				@include mediaquery-md {
+					width: 285 * $vp;
+					height: 35 * $vp;
+					font-size: 24 * $vp;
+				}
 				label{
 					position: absolute;
 				}
@@ -747,6 +959,9 @@
 					padding: 25 * $vp 0;
 					border-bottom: 1px solid #000;
 					display: flex;
+					@include mediaquery-md {
+						flex-direction: column;
+					}
 					&:last-child{
 						border-bottom: 0;
 					}
@@ -761,6 +976,9 @@
 						justify-content: center;
 						margin-right: 50 * $vp;
 						flex-shrink:0;
+						@include mediaquery-md {
+							margin: 0 auto 15 * $vp auto;
+						}
 					}
 					.list-text{
 						line-height: 1.6;
@@ -769,6 +987,9 @@
 							line-height: 1.6;
 							padding-top: 7 * $vp;
 							margin-bottom: 30 * $vp;
+							@include mediaquery-md {
+								font-size: 14 * $vp;
+							}
 							&:last-child{
 								margin-bottom: 0;
 							}
@@ -788,6 +1009,9 @@
 	.recruitVoice{
 		padding-top: 100 * $vp;
 		padding-bottom: 225 * $vp;
+		@include mediaquery-md {
+			padding-bottom: 115 * $vp;
+		}
 		h2{
 			padding: 0 20 * $vp;
 			height: 150 * $vp;
@@ -797,6 +1021,10 @@
 			justify-content: center;
 			font-size: 33 * $vp;
 			font-weight: 700;
+			@include mediaquery-md {
+				height: 81 * $vp;
+				font-size: 16 * $vp;
+			}
 			label{
 				width: 558 * $vp;
 				height: 150 * $vp;
@@ -805,6 +1033,10 @@
 				left: 0;
 				right: 0;
 				margin: auto;
+				@include mediaquery-md {
+					width: 284 * $vp;
+					height: 81 * $vp;
+				}
 			}
 			span{
 				width: 320 * $vp;
@@ -816,6 +1048,9 @@
 				color: #FFF;
 				position: relative;
 				z-index:10;
+				@include mediaquery-md {
+					width: 160 * $vp;
+				}
 			}
 		}
 		.recruitVoice-description{
@@ -826,6 +1061,10 @@
 			margin-bottom: 75 * $vp;
 			position: relative;
 			z-index:10;
+			@include mediaquery-md {
+				font-size: 13 * $vp;
+				margin-top: -10 * $vp;
+			}
 		}
 		.recruitVoice__staff{
 			padding-bottom: 60 * $vp;
@@ -835,6 +1074,10 @@
 				li{
 					width: 50%;
 					margin-bottom: 75 * $vp;
+					@include mediaquery-md {
+						width: 100%;
+						margin-bottom: 45 * $vp;
+					}
 				}
 				.staff-image{}
 				.staff-text{
@@ -843,6 +1086,11 @@
 					display: flex;
 					flex-direction: column;
 					align-items: flex-start;
+					@include mediaquery-md {
+						width: 100%;
+						padding: 0 20 * $vp;
+						margin-top: -170 * $vp;
+					}
 				}
 				.staff-name{
 					display: inline-flex;
@@ -852,6 +1100,9 @@
 					font-weight: 700;
 					font-size: 20 * $vp;
 					margin-bottom: 12 * $vp;
+					@include mediaquery-md {
+						font-size: 16 * $vp;
+					}
 				}
 				.staff-position{
 					display: inline-flex;
@@ -861,6 +1112,9 @@
 					font-weight: 700;
 					font-size: 38 * $vp;
 					margin-bottom: 40 * $vp;
+					@include mediaquery-md {
+						font-size: 31 * $vp;
+					}
 				}
 				.staff-catch{
 					text-decoration: underline $color-orange;
@@ -870,6 +1124,10 @@
 					line-height: 1.8;
 					font-weight: 700;
 					margin-bottom: 40 * $vp;
+					@include mediaquery-md {
+						font-size: 30 * $vp;
+						text-underline-offset:0.5em;
+					}
 				}
 			}
 		}
@@ -877,17 +1135,31 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+			@include mediaquery-md {
+				flex-direction: column;
+			}
 			.about-image{
 				width: 625 * $vp;
+				@include mediaquery-md {
+					width: 100%;
+					padding: 0 30 * $vp;
+					margin-bottom: 50 * $vp;
+				}
 			}
 			.about-text{
 				width: 395 * $vp;
+				@include mediaquery-md {
+					width: 100%;
+				}
 			}
 			h3{
 				font-size: 30 * $vp;
 				line-height: 1.6;
 				font-weight: 700;
 				margin-bottom: 40 * $vp;
+				@include mediaquery-md {
+					font-size: 24 * $vp;
+				}
 			}
 		}
 	}
@@ -895,17 +1167,26 @@
 		position: relative;
 		.recruitChallenge__header{
 			height: 875 * $vp;
+			@include mediaquery-md {
+				height: 235 * $vp;
+			}
 			figure{
 				width: 100%;
 				height: 875 * $vp;
 				position: absolute;
 				top: 0;
 				left: 0;
+				@include mediaquery-md {
+					height: 235 * $vp;
+				}
 				img{
 					width: 100%;
 					height: 875 * $vp;
 					object-fit:cover;
 					object-position:center bottom;
+					@include mediaquery-md {
+						height: 235 * $vp;
+					}
 				}
 			}
 			h2{
@@ -917,6 +1198,11 @@
 				right: 0;
 				margin: auto;
 				z-index:10;
+				@include mediaquery-md {
+					width: 281 * $vp;
+					height: 40 * $vp;
+					top: -25 * $vp;
+				}
 			}
 			.header-description{
 				display: flex;
@@ -927,6 +1213,11 @@
 				top: 175 * $vp;
 				left: 47%;
 				z-index:10;
+				@include mediaquery-md {
+					top: 40 * $vp;
+					left: auto;
+					right: 65 * $vp;
+				}
 				span{
 					display: inline-flex;
 					color: #FFF;
@@ -935,6 +1226,11 @@
 					font-weight: 700;
 					padding: 10 * $vp 20 * $vp;
 					margin-bottom: 30 * $vp;
+					@include mediaquery-md {
+						font-size: 10 * $vp;
+						margin-bottom: 6 * $vp;
+						padding: 5 * $vp 10 * $vp;
+					}
 				}
 			}
 		}
@@ -943,9 +1239,12 @@
 			padding: 185 * $vp 0 110 * $vp 0;
 			position: relative;
 			color: #FFF;
+			@include mediaquery-md {
+				padding: 80 * $vp 0 60 * $vp 0;
+			}
 			.challenge-block{
 				margin-bottom: 130 * $vp;
-					h3{
+				h3{
 					text-align: center;
 					font-size: 38 * $vp;
 					font-weight: 700;
@@ -955,13 +1254,28 @@
 					display: flex;
 					flex-direction: column;
 					margin-bottom: 40 * $vp;
+					@include mediaquery-md {
+						font-size: 18 * $vp;
+						text-underline-offset:0.6em;
+					}
 					label{
 						margin-bottom: 30 * $vp;
+						@include mediaquery-md {
+							margin-bottom: 20 * $vp;
+							img{
+								width: auto;
+								height: 30 * $vp;
+							}
+						}
 					}
 				}
 				p{
 					width: 525 * $vp;
 					margin: 0 auto 30 * $vp auto;
+					@include mediaquery-md {
+						width: 100%;
+						padding: 0 30 * $vp;
+					}
 					&:last-child{
 						margin-bottom: 0;
 					}
@@ -1004,8 +1318,18 @@
 				text-align: center;
 				margin-top: -50 * $vp;
 				margin-bottom: 170 * $vp;
+				@include mediaquery-md {
+					margin-bottom: 60 * $vp;
+				}
 				figcaption{
 					margin-top: -110 * $vp;
+					@include mediaquery-md {
+						margin-top: -35 * $vp;
+						img{
+							width: auto;
+							height: 42 * $vp;
+						}
+					}
 				}
 			}
 			.chalenge-feature{
@@ -1013,6 +1337,10 @@
 				align-items: flex-start;
 				flex-wrap: wrap;
 				margin: 0 -12 * $vp;
+				@include mediaquery-md {
+					flex-direction: column;
+					margin: 12 * $vp 0;
+				}
 				h3{
 					font-size: 59 * $vp;
 					font-weight: 700;
@@ -1023,18 +1351,38 @@
 					flex-direction: column;
 					margin-bottom: 40 * $vp;
 					padding-right: 30px;
+					@include mediaquery-md {
+						font-size: 23 * $vp;
+						padding-left: 30 * $vp;
+					}
 					label{
 						margin-bottom: 30 * $vp;
+						@include mediaquery-md {
+							margin-bottom: 20 * $vp;
+							img{
+								width: 185 * $vp;
+								height: auto;
+							}
+						}
 					}
 				}
 				.feature-box{
 					width: 50%;
 					margin-bottom: 100 * $vp;
 					margin-right: -12 * $vp;
+					@include mediaquery-md {
+						width: 100%;
+						margin-right: 0;
+						margin-bottom: 50 * $vp;
+					}
 					&:nth-child(even){
 						margin-left: -12 * $vp;
 						margin-top: -50 * $vp;
 						margin-right: 0;
+						@include mediaquery-md {
+							margin-left: 0;
+							margin-top: 0;
+						}
 					}
 				}
 				.feature-list{
@@ -1043,9 +1391,15 @@
 					display: flex;
 					color: #000;
 					box-shadow: 0px 6px 30px 0px rgba(0, 0, 0, 0.35);
+					@include mediaquery-md {
+						flex-direction: column;
+					}
 					.list-text{
 						width: 50%;
 						padding: 35 * $vp 25 * $vp;
+						@include mediaquery-md {
+							width: 100%;
+						}
 						i{
 							text-align: center;
 							display: block;
@@ -1064,6 +1418,9 @@
 							font-size: 20 * $vp;
 							line-height: 1.5;
 							margin-bottom: 40 * $vp;
+							@include mediaquery-md {
+								margin-bottom: 25 * $vp;
+							}
 						}
 						p{
 							font-size: 14 * $vp;
@@ -1072,6 +1429,15 @@
 					}
 					.list-image{
 						width: 50%;
+						@include mediaquery-md {
+							width: 100%;
+							img{
+								width: 100%;
+								height: 205 * $vp;
+								object-fit:cover;
+								object-position:center bottom;
+							}
+						}
 					}
 				}
 			}
@@ -1079,6 +1445,9 @@
 	}
 	.recruitNumbers{
 		padding: 150 * $vp 0 0 0;
+		@include mediaquery-md {
+			padding-top: 75 * $vp;
+		}
 		h2{
 			padding: 60 * $vp 20 * $vp 0 20 * $vp;
 			position: relative;
@@ -1089,6 +1458,10 @@
 			font-size: 33 * $vp;
 			font-weight: 700;
 			margin-bottom: 80 * $vp;
+			@include mediaquery-md {
+				margin-bottom: 40 * $vp;
+				padding-top: 0;
+			}
 			label{
 				width: 868 * $vp;
 				height: 145 * $vp;
@@ -1097,6 +1470,10 @@
 				left: 0;
 				right: 0;
 				margin: auto;
+				@include mediaquery-md {
+					width: 326 * $vp;
+					height: 54 * $vp;
+				}
 			}
 			span{
 				width: 320 * $vp;
@@ -1109,11 +1486,20 @@
 				position: relative;
 				z-index:10;
 				margin-bottom: 30 * $vp;
+				@include mediaquery-md {
+					margin-top: 20 * $vp;
+					margin-bottom: 15 * $vp;
+					width: 160 * $vp;
+					font-size: 16 * $vp;
+				}
 			}
 			b{
 				position: relative;
 				z-index:10;
 				font-size: 44 * $vp;
+				@include mediaquery-md {
+					font-size: 22 * $vp;
+				}
 			}
 		}
 		h3{
@@ -1128,6 +1514,11 @@
 			justify-content: center;
 			min-width: 140 * $vp;
 			padding: 0 15 * $vp;
+			@include mediaquery-md {
+				font-size: 10 * $vp;
+				height: 25 * $vp;
+				min-width: 86 * $vp;
+			}
 		}
 		.recruitNumbers-description{
 			font-size: 28 * $vp;
@@ -1151,15 +1542,26 @@
 				display: flex;
 				flex-direction: column;
 				align-items: center;
+				@include mediaquery-md {
+					width: calc(50% - #{12 * $vp});
+					min-height: 200 * $vp;
+					padding: 35 * $vp 10 * $vp;
+				}
 				.box-large{
 					margin-top: 30 * $vp;
 					font-weight: 700;
 					font-size: 23 * $vp;
+					@include mediaquery-md {
+						font-size: 13 * $vp;
+					}
 					strong{
 						font-family: $lato;
 						font-style: italic;
 						font-size: 97 * $vp;
 						color: $color-blue;
+						@include mediaquery-md {
+							font-size: 56 * $vp;
+						}
 					}
 					small{
 						font-size: 11 * $vp;
@@ -1174,6 +1576,9 @@
 					margin: 50 * $vp -10 * $vp 0 -10 * $vp;
 					font-size: 20 * $vp;
 					font-weight: 700;
+					@include mediaquery-md {
+						margin-top: 30 * $vp;
+					}
 					.flat-box{
 						width: calc(50% - #{20 * $vp});
 						text-align: center;
@@ -1184,11 +1589,17 @@
 						font-style: italic;
 						font-size: 58 * $vp;
 						color: $color-blue;
+						@include mediaquery-md {
+							font-size: 34 * $vp;
+						}
 					}
 					span{
 						display: block;
 						text-align: center;
 						margin-top: 10 * $vp;
+						@include mediaquery-md {
+							font-size: 11 * $vp;
+						}
 					}
 				}
 				.box-list{
@@ -1197,6 +1608,10 @@
 					font-weight: 700;
 					font-size: 20 * $vp;
 					line-height: 1.6;
+					@include mediaquery-md {
+						width: 90 * $vp;
+						font-size: 11 * $vp;
+					}
 					dl{
 						display: flex;
 						justify-content: space-between;
@@ -1215,28 +1630,60 @@
 			flex-direction: column;
 			justify-content: center;
 			align-items: center;
+			@include mediaquery-md {
+				width: 100%;
+				height: auto;
+			}
 			h3{
 				width: 270 * $vp;
+				@include mediaquery-md {
+					width: 205 * $vp;
+				}
 			}
 		}
 		.number-ranking{
 			width: 800 * $vp;
 			font-weight: 700;
 			margin:40 * $vp 0 -20 * $vp 0;
+			@include mediaquery-md {
+				width: 100%;
+			}
 			dl{
 				display: flex;
 				padding: 20 * $vp 0;
 				font-size: 28 * $vp;
+				@include mediaquery-md {
+					flex-direction: column;
+					justify-content: center;
+					align-items: center;
+					text-align: center;
+					font-feature-settings: "palt";
+				}
 				&:first-child{
 					font-size: 37 * $vp;
 					padding-bottom: 35 * $vp;
+					@include mediaquery-md {
+						dd{
+							font-size: 24 * $vp;
+						}
+					}
 				}
 				dt{
 					width: 165 * $vp;
 					flex-shrink: 0;
+					@include mediaquery-md {
+						width: 100%;
+						font-size: 28 * $vp;
+						margin-bottom: 15 * $vp;
+					}
 				}
 				dd{
 					flex-grow: 1;
+					@include mediaquery-md {
+						width: 100%;
+						font-size: 18 * $vp;
+						line-height: 1.4;
+					}
 				}
 			}
 		}
@@ -1245,6 +1692,11 @@
 			display: flex;
 			flex-wrap: wrap;
 			margin: 40 * $vp -12.5 * $vp 0 -12.5 * $vp;
+			@include mediaquery-md {
+				flex-direction: column;
+				width: 245 * $vp;
+				margin: 30 * $vp 0 0 0;
+			}
 			dl{
 				width: calc(100% / 3 - #{25 * $vp});
 				margin: 0 12.5 * $vp;
@@ -1252,12 +1704,24 @@
 				display: flex;
 				align-items: center;
 				border-bottom: 1px solid #707070;
+				@include mediaquery-md {
+					width: 100%;
+					margin: 0;
+					padding: 15 * $vp 0;
+				}
 				&.is-topBorder{
 					border-top: 1px solid #707070;
+					@include mediaquery-md {
+						border-top: 0;
+					}
 				}
 				dt{
 					width: 220 * $vp;
 					flex-shrink: 0;
+					@include mediaquery-md {
+						width: 190 * $vp;
+						font-size: 12 * $vp;
+					}
 				}
 				dd{
 					flex-grow: 1;
@@ -1266,6 +1730,10 @@
 					font-weight: 700;
 					color: $color-blue;
 					text-align: right;
+					@include mediaquery-md {
+						font-size: 20 * $vp;
+						padding-right: 7 * $vp;
+					}
 				}
 			}
 		}
@@ -1284,6 +1752,12 @@
 			font-weight: 700;
 			position: relative;
 			margin-bottom: 60 * $vp;
+			@include mediaquery-md {
+				height: 80 * $vp;
+				font-size: 15 * $vp;
+				margin-top: 30 * $vp;
+				margin-bottom: 45 * $vp;
+			}
 			label{
 				width: 362 * $vp;
 				height: 170 * $vp;
@@ -1292,6 +1766,10 @@
 				left: 0;
 				right: 0;
 				margin: auto;
+				@include mediaquery-md {
+					width: 171 * $vp;
+					height: 80 * $vp;
+				}
 			}
 			span{
 				width: 320 * $vp;
@@ -1301,6 +1779,9 @@
 				background: $color-blue;
 				z-index:10;
 				color: #fff;
+				@include mediaquery-md {
+					width: 160 * $vp;
+				}
 			}
 		}
 		dl{
@@ -1308,6 +1789,9 @@
 			background: $color-blue;
 			color: #FFF;
 			padding: 55 * $vp 80 * $vp;
+			@include mediaquery-md {
+				padding: 25 * $vp 15 * $vp;
+			}
 			&:last-child{
 				margin-bottom: 0;
 			}
@@ -1320,11 +1804,17 @@
 					font-size: 18 * $vp;
 					font-weight: 700;
 					line-height: 1.4;
+					@include mediaquery-md {
+						font-size: 14 * $vp;
+					}
 				}
 			}
 			dd{
 				padding-top: 30 * $vp;
 				display: flex;
+				@include mediaquery-md {
+					font-size: 14 * $vp;
+				}
 			}
 			i{
 				color: $color-blue;
@@ -1339,9 +1829,18 @@
 				justify-content: center;
 				margin-right: 50 * $vp;
 				flex-shrink: 0;
+				@include mediaquery-md {
+					width: 36 * $vp;
+					height: 36 * $vp;
+					font-size: 16 * $vp;
+					margin-right: 15 * $vp;
+				}
 			}
 			p, h3{
 				flex-grow: 1;
+				@include mediaquery-md {
+					line-height: 1.5;
+				}
 			}
 		}
 	}
@@ -1355,36 +1854,64 @@
 			font-weight: 700;
 			font-size: 33 * $vp;
 			text-align: center;
+			@include mediaquery-md {
+				width: 160 * $vp;
+				font-size: 16 * $vp;
+				margin-bottom: 20 * $vp;
+			}
 		}
 		.recruitOffice-description{
 			text-align: center;
 			font-size: 33 * $vp;
 			font-weight: 700;
 			margin-bottom: 70 * $vp;
+			@include mediaquery-md {
+				font-size: 16 * $vp;
+				margin-bottom: 40 * $vp;
+			}
 		}
 		.office-list{
 			display: flex;
 			flex-wrap: wrap;
 			margin: -55 * $vp;
+			@include mediaquery-md {
+				margin: -20 * $vp 0;
+				padding: 0 20 * $vp;
+			}
 			li{
 				width: calc(50% - #{110 * $vp});
 				margin: 55 * $vp;
+				@include mediaquery-md {
+					width: 100%;
+					margin: 20 * $vp 0;
+				}
 			}
 		}
 		h3{
 			font-size: 33 * $vp;
 			font-weight: 700;
 			margin-bottom: 20 * $vp;
+			@include mediaquery-md {
+				font-size: 19 * $vp;
+				margin-bottom: 15 * $vp;
+			}
 		}
 		address{
 			font-size: 20 * $vp;
 			display: block;
 			margin-bottom: 15 * $vp;
 			line-height: 1.5;
+			@include mediaquery-md {
+				font-size: 11 * $vp;
+			}
 		}
 		iframe{
 			width: 100%;
 			height: 340 * $vp;
+			@include mediaquery-md {
+				height: auto;
+				aspect-ratio:4 / 3;
+			}
 		}
 	}
 }
@@ -1393,12 +1920,18 @@
 	position: relative;
 	width: 100%;
 	height: 670 * $vp;
+	@include mediaquery-md {
+		height: 265 * $vp;
+	}
 	&.type-A{
 		.recruitCta__image{
 			background: #F3F5F7;
 			position: relative;
 			width: 100%;
 			height: 525 * $vp;
+			@include mediaquery-md {
+				height: 200 * $vp;
+			}
 			figure{
 				width: 1300 * $vp;
 				height: 775 * $vp;
@@ -1408,6 +1941,11 @@
 				left: 0;
 				right: 0;
 				margin: auto;
+				@include mediaquery-md {
+					width: auto;
+					height: 200 * $vp;
+					top: -80 * $vp;
+				}
 			}
 			img{
 				width: 100%;
@@ -1423,6 +1961,9 @@
 			position: relative;
 			width: 100%;
 			height: 465 * $vp;
+			@include mediaquery-md {
+				height: 295 * $vp;
+			}
 			figure{
 				width: 1040 * $vp;
 				height: 545 * $vp;
@@ -1432,12 +1973,21 @@
 				left: 0;
 				right: 0;
 				margin: auto;
+				@include mediaquery-md {
+					padding: 0 20 * $vp;
+					width: auto;
+					height: 150 * $vp;
+					top: -30 * $vp;
+				}
 			}
 			img{
 				width: 100%;
 				height: 100%;
 				object-fit:cover;
 				object-position:center top;
+				@include mediaquery-md {
+					height: 150 * $vp;
+				}
 			}
 		}
 		.recruitCta__inner{
@@ -1450,6 +2000,9 @@
 			position: relative;
 			width: 100%;
 			height: 655 * $vp;
+			@include mediaquery-md {
+				height: 290 * $vp;
+			}
 			figure{
 				width: 1300 * $vp;
 				height: 775 * $vp;
@@ -1459,25 +2012,48 @@
 				left: 0;
 				right: 0;
 				margin: auto;
+				@include mediaquery-md {
+					width: auto;
+					height: 200 * $vp;
+					top: -80 * $vp;
+					padding: 0 20 * $vp;
+				}
 			}
 			img{
 				width: 100%;
 				height: 100%;
 				object-fit:cover;
 				object-position:center top;
+				@include mediaquery-md {
+					height: 200 * $vp;
+				}
+			}
+		}
+		.recruitCta__inner{
+			@include mediaquery-md {
+				margin-top: -250 * $vp;
 			}
 		}
 		+ .recruitCategory{
 			margin-top: 300 * $vp;
+			@include mediaquery-md {
+				margin-top: 170 * $vp;
+			}
 		}
 	}
 	&.type-D{
 		margin-top: 390 * $vp;
+		@include mediaquery-md {
+			margin-top: 120 * $vp;
+		}
 		.recruitCta__image{
 			background: #F3F5F7;
 			position: relative;
 			width: 100%;
 			height: 495 * $vp;
+			@include mediaquery-md {
+				height: 240 * $vp;
+			}
 			figure{
 				width: 1300 * $vp;
 				height: 775 * $vp;
@@ -1487,13 +2063,30 @@
 				left: 0;
 				right: 0;
 				margin: auto;
+				@include mediaquery-md {
+					width: auto;
+					height: 200 * $vp;
+					top: -80 * $vp;
+					padding: 0 20 * $vp;
+				}
 			}
 			img{
 				width: 100%;
 				height: 100%;
 				object-fit:cover;
 				object-position:center top;
+				@include mediaquery-md {
+					height: 200 * $vp;
+				}
 			}
+		}
+		.recruitCta__inner{
+			@include mediaquery-md {
+				margin-top: -240 * $vp;
+			}
+		}
+		.recruitCta__body{
+			margin-top: 10 * $vp;
 		}
 	}
 	.recruitCta__inner{
@@ -1502,10 +2095,18 @@
 		margin: -425 * $vp auto 0 auto;
 		position: relative;
 		z-index:20;
+		@include mediaquery-md {
+			width: 100%;
+			margin-top: -170 * $vp;
+		}
 	}
 	.recruitCta__body{
 		background: $color-blue;
 		padding: 30 * $vp 70 * $vp;
+		@include mediaquery-md {
+			padding: 20 * $vp;
+			margin: 0 -20 * $vp;
+		}
 		h2{
 			margin-bottom: 20 * $vp;
 			height: 88 * $vp;
@@ -1514,6 +2115,10 @@
 			align-items: center;
 			justify-content: center;
 			position: relative;
+			@include mediaquery-md {
+				height: 47 * $vp;
+				margin-bottom: 15 * $vp;
+			}
 			label{
 				width: 365 * $vp;
 				height: 88 * $vp;
@@ -1524,6 +2129,10 @@
 				margin: auto;
 				display: block;
 				z-index:10;
+				@include mediaquery-md {
+					width: 200 * $vp;
+					height: 47 * $vp;
+				}
 			}
 			span{
 				position: relative;
@@ -1533,6 +2142,11 @@
 				font-weight: 700;
 				padding: 0 10 * $vp;
 				font-size: 18 * $vp;
+				@include mediaquery-md {
+					font-size: 10 * $vp;
+					font-feature-settings: "palt";
+					padding: 0 7.5 * $vp;
+				}
 			}
 		}
 	}
@@ -1544,6 +2158,9 @@
 		align-items: center;
 		font-weight: 700;
 		margin-bottom: 55 * $vp;
+		@include mediaquery-md {
+			margin-bottom: 30 * $vp;
+		}
 		span{
 			display: inline-flex;
 			font-size: 24 * $vp;
@@ -1551,14 +2168,36 @@
 			background: $color-blue;
 			padding: 25 * $vp 35 * $vp;
 			margin: 5 * $vp 0;
+			@include mediaquery-md {
+				font-size: 10 * $vp;
+				padding: 10 * $vp 15 * $vp;
+			}
 		}
 	}
 	.recruitCta-btn{
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: 30 * $vp;
+		@include mediaquery-md {
+			margin-bottom: 15 * $vp;
+		}
 		a{
 			width: 315 * $vp;
+			@include mediaquery-md {
+				width: 48%;
+				&.size-mid{
+					font-size: 11 * $vp;
+					height: 40 * $vp;
+					padding: 0 7.5 * $vp;
+					span{
+						font-feature-settings: "palt";
+						&:after{
+							width: 16 * $vp;
+							height: 16 * $vp;
+						}
+					}
+				}
+			}
 		}
 	}
 	.recruitCta-tel{
@@ -1596,6 +2235,10 @@
 	padding: 165 * $vp 0 60 * $vp 0;
 	color: #FFF;
 	margin-bottom: 60 * $vp;
+	@include mediaquery-md {
+		padding: 80 * $vp 0 260 * $vp 0;
+		margin-bottom: 0;
+	}
 	h2{
 		width: 100%;
 		height: 142 * $vp;
@@ -1606,6 +2249,10 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		@include mediaquery-md {
+			height: 51 * $vp;
+			font-size: 16 * $vp;
+		}
 		label{
 			width: 827 * $vp;
 			height: 142 * $vp;
@@ -1614,6 +2261,10 @@
 			left: 0;
 			right: 0;
 			margin: auto;
+			@include mediaquery-md {
+				width: 295 * $vp;
+				height: 51 * $vp;
+			}
 		}
 		span{
 			position: relative;
@@ -1623,6 +2274,9 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			@include mediaquery-md {
+				width: 160 * $vp;
+			}
 		}
 	}
 	h3{
@@ -1634,12 +2288,20 @@
 		position: relative;
 		z-index:10;
 		margin-bottom: 50 * $vp;
+		@include mediaquery-md {
+			font-size: 18 * $vp;
+			margin-top: 10 * $vp;
+		}
 	}
 	.contact-description{
 		text-align: center;
 		font-size: 22 * $vp;
 		margin-bottom: 70 * $vp;
 		line-height: 1.5;
+		@include mediaquery-md {
+			font-size: 14 * $vp;
+			margin-bottom: 40 * $vp;
+		}
 	}
 }
 .recruitForm{
@@ -1647,6 +2309,11 @@
 		display: flex;
 		align-items: center;
 		padding: 20 * $vp 0;
+		@include mediaquery-md {
+			flex-direction: column;
+			align-items: flex-start;
+			padding: 17.5 * $vp 0;
+		}
 		dt{
 			font-weight: 700;
 			font-size: 20 * $vp;
@@ -1655,12 +2322,24 @@
 			justify-content: space-between;
 			margin-right: 30 * $vp;
 			flex-shrink: 0;
+			@include mediaquery-md {
+				font-size: 18 * $vp;
+				width: 70%;
+				margin-top: 0;
+				margin-bottom: 15 * $vp;
+			}
 		}
 		dd{
 			flex-grow: 1;
+			@include mediaquery-md {
+				width: 100%;
+			}
 			p{
 				margin-top: 15 * $vp;
 				line-height: 1.6;
+				@include mediaquery-md {
+					font-size: 14 * $vp;
+				}
 			}
 		}
 		&.is-top{
@@ -1767,9 +2446,19 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		@include mediaquery-md {
+			margin-top: 30 * $vp;
+			flex-direction: column;
+		}
 		button, a{
 			width: 315 * $vp;
 			margin: 0 1em;
+			@include mediaquery-md {
+				width: 190 * $vp;
+				margin: .5em 0;
+				height: 56 * $vp;
+				font-size: 17 * $vp;
+			}
 		}
 	}
 }
